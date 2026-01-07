@@ -1,0 +1,76 @@
+<html>
+<body>
+    <div class="login">
+        <h1>Boston House Price Prediction</h1>
+   
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <h1>
+                <legend>Boston House Prediction</legend>
+            </h1>
+            <div class="mb-3">
+                <label class="form-label">CRIM</label>
+                <input class="form-control" type="number" name="crim" placeholder="Enter CRIM" step="any" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ZN</label>
+                <input class="form-control" type="number" name="zn" placeholder="Enter ZN" step="any" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">INDUS</label>
+                <input class="form-control" type="number" name="indus" placeholder="Enter INDUS" step="any" required />
+            </div>
+             <div class="mb-3">
+                <label class="form-label">CHAS</label>
+                <select class="form-control" name="chas" placeholder="Enter CHAS" required>
+                    <option class="placeholder" selected disabled value="">Select CHAS</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">NOX</label>
+                <input class="form-control" type="number" name="nox" placeholder="Enter NOX" step="any" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">RM</label>
+                <input class="form-control" type="number" name="rm" placeholder="Enter RM" step="any" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">AGE</label>
+                <input class="form-control" type="number" name="age" placeholder="Enter AGE" step="any" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">DIS</label>
+                <input class="form-control" type="number" name="dis" placeholder="Enter DIS" step="any" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">RAD</label>
+                <input class="form-control" type="number" name="rad" placeholder="Enter RAD" step="any" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">TAX</label>
+                <input class="form-control" type="number" name="tax" placeholder="Enter TAX" step="any" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">PTRATIO</label>
+                <input class="form-control" type="number" name="ptratio" placeholder="Enter PTRATIO" step="any" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">B</label>
+                <input class="form-control" type="number" name="b" placeholder="Enter B" step="any" required />
+            </div>
+             <div class="mb-3">
+                <label class="form-label">LSTAT</label>
+                <input class="form-control" type="number" name="lstat" placeholder="Enter LSTAT" step="any" required />
+            </div>
+            
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Predict your House Price" required />
+            </div>
+        </form>
+        <h2>
+           The prediction is {{results}}
+        </h2>
+    </div>
+</body>
+</html>
